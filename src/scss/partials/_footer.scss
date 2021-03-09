@@ -1,0 +1,46 @@
+footer {
+    position: relative;
+    z-index: 2;
+    .wrapper {
+        padding-bottom: 45px;
+        text-align: center;
+        .row {
+            position: relative;
+        }
+    }
+    .logo {
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 769px) {
+            max-width: 340px;
+        }
+    }
+    .footer-menu {
+        margin-bottom: 45px;
+        .nav {
+            justify-content: center;
+        }
+    }
+    .social {
+        justify-content: center;
+        @media screen and (min-width: 769px) {
+            position: absolute;
+            right: 0;
+            top: 25px;
+        }
+        @media screen and ($tablet) {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+// Mightily Logo
+a#mtbSvg {
+    @media screen and (min-width: 769px) {
+        position: absolute;
+        top: 70px;
+        right: 0;
+    }
+}

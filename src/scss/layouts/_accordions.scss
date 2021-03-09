@@ -1,0 +1,83 @@
+.layout.accordion {
+    .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+        &.top {
+            background-position: center top;
+        }
+        &.middle {
+            background-position: center center;
+        }
+        &.bottom {
+            background-position: center bottom;
+        }
+    }
+    .wrapper {
+        position: relative;
+    }
+    &.tabs {
+        .tab-nav {
+            margin-bottom: 45px;
+            font-size: 22px;
+            text-align: center;
+            @media screen and (min-width: 769px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .tab-list {
+            @media screen and (min-width: 769px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .tab-select,
+        .tab-link a {
+            font-family: $heading-font-family;
+            font-weight: 600;
+            line-height: 1.8;
+            color: $offwhite;
+        }
+        .tab-select {
+            white-space: nowrap;
+            @media screen and (min-width: 769px) {
+                margin-right: 1em;
+            }
+        }
+        .tab-link:not(:last-child) {
+            @media screen and (min-width: 769px) {
+                @include pipe;
+            }
+        }
+        .tab-link a:hover,
+        .tab-link.active a {
+            color: orange;
+        }
+        .content {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            .acc-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                z-index: 0;
+                transition: opacity .3s ease-in-out;
+                &.active {
+                    position: relative;
+                    opacity: 1;
+                    z-index: 1;
+                    transition: opacity .3s ease-in-out;
+                }
+            }
+        }
+    }
+}

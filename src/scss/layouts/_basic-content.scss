@@ -1,0 +1,69 @@
+.layout.basic-content {
+    .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+        &.top {
+            background-position: center top;
+        }
+        &.middle {
+            background-position: center center;
+        }
+        &.bottom {
+            background-position: center bottom;
+        }
+    }
+    .wrapper {
+        position: relative;
+    }
+    .image {
+        margin-bottom: 30px;
+    }
+    ul, ol {
+        padding-left: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
+    &.align-left .wrapper {
+        max-width: 600px;
+    }
+    &.align-center .wrapper {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    &.align-right .wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        text-align: right;
+    }
+    .date-time {
+        color: $orange;
+    }
+    .orange {
+        &.horizontal {
+            font-weight: 600;
+            span:not(:last-child) {
+                @include pipe;
+            }
+        }
+        &.vertical {
+            font-weight: 600;
+            span {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@include('inc/header.html')
+
+<div id="app" class="style-guide-wrapper interior-page">
+
+	@include('news/basic-content.html')
+
+	<section class="layout filtes basic-content center-align">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content">
+						<div class="fieldset search-filters">
+							<h3>Filter By: </h3>
+							<div class="filter post-category">
+								<div class="facetwp-facet facetwp-facet-post_category facetwp-type-dropdown" data-name="post_category" data-type="dropdown">
+									<select class="facetwp-dropdown">
+										<option value="">Type</option><option value="event">Event (9)</option><option value="uncategorized">Uncategorized (1)</option>
+									</select>
+								</div>
+							</div>
+							<div class="filter date-filter">
+								<div class="facetwp-sort">
+									<select class="facetwp-sort-select">
+										<option value="default">Date</option><option value="date_desc">Old to New</option><option value="date_asc">New to Old</option>
+									</select>
+								</div>                        
+							</div>
+							<a href="javascript:void(0)" class="styled-link facetwp-search-reset" onclick="FWP.reset()">Reset</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="layout listing post grid">
+		<div class="wrapper">
+			<div class="row">
+				<ul class="items facetwp-template">
+					<!--fwp-loop-->
+					<li class="item">
+						<img src="assets/img/nba2lou-news.jpg" alt="NBA2Lou">
+						<h4 class="title"><a href="https://staging.nba2lou.com/hello-world/">Hello world!</a></h4>
+						<p class="author-date">By: mightily | April 1, 2020</p>                        
+					</li>
+					<li class="item">
+						<img width="300" height="240" src="https://staging.nba2lou.com/app/uploads/2020/04/5d971614-6500-310d-ad97-2309f886da87-300x240.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://staging.nba2lou.com/app/uploads/2020/04/5d971614-6500-310d-ad97-2309f886da87-300x240.png 300w, https://staging.nba2lou.com/app/uploads/2020/04/5d971614-6500-310d-ad97-2309f886da87.png 538w" sizes="(max-width: 300px) 100vw, 300px"><h4 class="title"><a href="https://staging.nba2lou.com/vero-perferendis-quam-unde-et-eius/">Vero perferendis quam unde et eius</a></h4>
+						<p class="author-date">By: mightily | April 9, 2020</p>                        
+					</li>
+					<li class="item">
+						<img src="assets/img/nba2lou-news.jpg" alt="NBA2Lou">
+						<h4 class="title"><a href="https://staging.nba2lou.com/recusandae-voluptatem-reiciendis-pariatur-amet/">Recusandae voluptatem reiciendis pariatur amet</a></h4>
+						<p class="author-date">By: taylormightily-com | April 9, 2020</p>                        
+					</li>
+					<li class="item">
+						<img width="300" height="240" src="https://staging.nba2lou.com/app/uploads/2020/04/81e4c2f1-367e-3b49-8d5b-db91f514f30d-300x240.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://staging.nba2lou.com/app/uploads/2020/04/81e4c2f1-367e-3b49-8d5b-db91f514f30d-300x240.png 300w, https://staging.nba2lou.com/app/uploads/2020/04/81e4c2f1-367e-3b49-8d5b-db91f514f30d.png 303w" sizes="(max-width: 300px) 100vw, 300px"><h4 class="title"><a href="https://staging.nba2lou.com/fugit-ut-eaque-ex-impedit-ducimus-expedita/">Fugit ut eaque ex impedit ducimus expedita</a></h4>
+					</li>
+					<li class="item">
+						<img src="assets/img/nba2lou-news.jpg" alt="NBA2Lou">
+						<h4 class="title"><a href="https://staging.nba2lou.com/nemo-error-optio-sit/">Nemo error optio sit</a></h4>
+						<p class="author-date">By: taylormightily-com | April 9, 2020</p>
+					</li>
+					<li class="item">
+						<img width="300" height="200" src="https://staging.nba2lou.com/app/uploads/2020/04/dc1fb8c1-d026-31d4-b9cd-71b4ac7cb199-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://staging.nba2lou.com/app/uploads/2020/04/dc1fb8c1-d026-31d4-b9cd-71b4ac7cb199-300x200.jpg 300w, https://staging.nba2lou.com/app/uploads/2020/04/dc1fb8c1-d026-31d4-b9cd-71b4ac7cb199-1024x682.jpg 1024w, https://staging.nba2lou.com/app/uploads/2020/04/dc1fb8c1-d026-31d4-b9cd-71b4ac7cb199-768x512.jpg 768w, https://staging.nba2lou.com/app/uploads/2020/04/dc1fb8c1-d026-31d4-b9cd-71b4ac7cb199.jpg 1420w" sizes="(max-width: 300px) 100vw, 300px"><h4 class="title"><a href="https://staging.nba2lou.com/harum-ipsum-quod-dolore-delectus/">Harum ipsum quod dolore delectus</a></h4>
+						<p class="author-date">By: mightily | April 9, 2020</p>
+					</li>
+					<li class="item">
+						<img width="300" height="239" src="https://staging.nba2lou.com/app/uploads/2020/04/13477d01-cc98-32cc-b298-8b0af1e38728-300x239.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://staging.nba2lou.com/app/uploads/2020/04/13477d01-cc98-32cc-b298-8b0af1e38728-300x239.png 300w, https://staging.nba2lou.com/app/uploads/2020/04/13477d01-cc98-32cc-b298-8b0af1e38728.png 306w" sizes="(max-width: 300px) 100vw, 300px"><h4 class="title"><a href="https://staging.nba2lou.com/possimus-debitis-sed-sed-quo-omnis-ullam/">Possimus debitis sed sed quo omnis ullam</a></h4>
+					</li>
+					<li class="item">
+						<img width="254" height="203" src="https://staging.nba2lou.com/app/uploads/2020/04/b75d01f1-d339-3500-9770-d0ccc3d08821.png" class="attachment-medium size-medium wp-post-image" alt=""><h4 class="title"><a href="https://staging.nba2lou.com/reiciendis-ullam-repellat-est-ab-quod/">Reiciendis ullam repellat est ab quod</a></h4>
+						<p class="author-date">By: mightily | April 9, 2020</p>
+					</li>
+					<li class="item">
+						<img width="300" height="200" src="https://staging.nba2lou.com/app/uploads/2020/04/09bf3671-4587-309c-9015-47c75533ce72-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://staging.nba2lou.com/app/uploads/2020/04/09bf3671-4587-309c-9015-47c75533ce72-300x200.jpg 300w, https://staging.nba2lou.com/app/uploads/2020/04/09bf3671-4587-309c-9015-47c75533ce72-1024x683.jpg 1024w, https://staging.nba2lou.com/app/uploads/2020/04/09bf3671-4587-309c-9015-47c75533ce72-768x512.jpg 768w, https://staging.nba2lou.com/app/uploads/2020/04/09bf3671-4587-309c-9015-47c75533ce72.jpg 1146w" sizes="(max-width: 300px) 100vw, 300px"><h4 class="title"><a href="https://staging.nba2lou.com/assumenda-explicabo-fuga-saepe/">Assumenda explicabo fuga saepe</a></h4>
+						<p class="author-date">By: taylormightily-com | April 9, 2020</p>
+					</li>
+				</ul>
+			</div>
+			<div class="facetwp-facet facetwp-facet-load_more facetwp-type-pager" data-name="load_more" data-type="pager">
+				<button class="facetwp-load-more" data-loading="Loading...">Load more</button>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@include('inc/footer.html')

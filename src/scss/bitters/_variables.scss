@@ -1,0 +1,75 @@
+// Base Settings
+.layout {
+    position: relative;
+    margin-bottom: 120px;
+    z-index: 2;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+// Breakpoints
+$laptop: "max-width: 1260px";
+$tablet: "max-width: 768px";
+$mobile-lg: "max-width: 640px";
+$mobile-sm: "max-width: 480px";
+$menu-mf: "min-width: 741px";
+$menu: "max-width: 740px";
+
+// Typography
+@font-face {
+    font-family: 'hudson_ny_serif';
+    src: url('../fonts/hudson_ny_serif-webfont.woff') format('woff2'),
+         url('../fonts/hudson_ny_serif-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$base-font-family: proxima-nova, Helvetica, Arial, sans-serif;
+$heading-font-family: 'hudson_ny_serif', Helvetica, Arial, sans-serif;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Font Weight
+$base-font-weight: 400;
+$heading-font-weight: $base-font-weight;
+
+// Other Sizes
+$base-border-radius: 0px;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$offwhite: #e8e8e8;
+$deepblue: #06060e;
+$orange: #f89d29;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Font Colors
+$base-font-color: $offwhite;
+$action-color: $orange;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Transitions
+$base-duration: 300ms;
+$base-timing: ease-in-out;

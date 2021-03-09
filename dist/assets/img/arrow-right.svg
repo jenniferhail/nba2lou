@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23">
+  <defs>
+    <style>
+      .arrow {
+        fill: silver;
+      }
+    </style>
+  </defs>
+  <path class="arrow" d="M1768.99,3238.99l4.48-11.49-4.48-11.49,25.02,11.49Z" transform="translate(-1769 -3216)"/>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Lines" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1502 1623.7" style="enable-background:new 0 0 1502 1623.7;" xml:space="preserve">
+<style type="text/css">
+	.nba-white{fill:none;stroke:#E8E8E8;stroke-width:2;stroke-miterlimit:10;}
+	.dot{fill:#E8E8E8;}
+</style>
+<circle id="circle" class="nba-white" cx="751" cy="870" r="751"/>
+<circle id="dot-four" class="dot" cx="1377" cy="455" r="6"/>
+<polyline id="line-three_1_" class="nba-white" points="1025.1,423.3 1321.5,178.5 1321.5,95.7 "/>
+<circle id="dot-three" class="dot" cx="1206.5" cy="273.1" r="6"/>
+<circle id="dot-two" class="dot" cx="751" cy="119" r="6"/>
+<line id="line-two" class="nba-white" x1="751" y1="0" x2="751" y2="343"/>
+<circle id="dot-one" class="dot" cx="153" cy="415" r="6"/>
+<polyline id="line-one" class="nba-white" points="304.8,543 129,395.4 129,312.6 "/>
+</svg>

@@ -1,0 +1,169 @@
+#layout-1 {
+	overflow: visible;
+	.bg-image.top {
+		top: -224px;
+		min-height: 840px;
+		background-size: 100%;
+		background-position: center top;
+	}	
+	.home & {
+		.bg-image {
+			top: -224px;
+			min-height: 840px;
+			background-size: 100%;
+			background-position: center top;
+		}
+	}
+}
+
+
+
+.menu {
+	font-size: 18px;
+	@media screen and (min-width: 769px) {
+		display: flex;
+	}
+	.menu-item {
+		&.current-menu-item a {
+			color: $orange;
+		}
+		a {
+			font-family: $heading-font-family;
+			font-weight: 500;
+			line-height: 1.8;
+			color: #fff;
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+	&.home-menu {
+		display: flex;
+	}
+}
+.mobile-menu a {
+	font-style: italic;
+	@media screen and ($menu-mf) {
+		font-size: 32px;
+	}
+}
+.footer-menu {
+	.menu {
+		justify-content: center;
+		@media screen and (min-width: 769px) {
+			flex-wrap: wrap;
+		}
+	}
+	.menu-item {
+		&:not(:last-child) {
+			@media screen and (min-width: 769px) {
+				@include pipe;
+			}
+		}
+	}
+}
+.header .right {
+	.menu-item.subscribe-modal {
+		@include pipe;
+	}
+}
+
+.component.link-bar {
+	position: relative;
+	margin-bottom: 80px;
+    font-size: 22px;
+	text-align: center;
+	z-index: 1;
+	.list {
+		@media screen and (min-width: 769px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.item {
+		&:not(:last-child) {
+			@media screen and (min-width: 769px) {
+				@include pipe;
+			}
+		}
+	}
+	a {
+		font-family: $heading-font-family;
+		font-weight: 500;
+        line-height: 1.8;
+		color: $offwhite;
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+.layout.filter {
+	margin-bottom: 80px;
+}
+
+.article {
+	min-height: 360px;
+	.row {
+		.col.left {
+			@media screen and ($tablet) {
+				text-align: center;
+			}
+			@media screen and (min-width: 769px) {
+				width: calc( 3/5 * 100%);
+				padding-right: 2em;
+				float: left;
+			}
+		}
+		.col.right {
+			@media screen and ($tablet) {
+				text-align: center;
+			}
+			@media screen and (min-width: 769px) {
+				width: calc( 2/5 * 100%);
+				padding-left: 2em;
+				float: right;
+			}
+		}
+		&:last-child {
+			@media screen and (min-width: 769px) {
+				width: calc( 3/5 * 100%);
+				padding-right: 2em;
+			}
+		}
+	}
+	.title,
+	.meta {
+		color: $orange;
+	}
+	.meta {
+		margin-bottom: 30px;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	.social-share {
+		@media screen and ($tablet) {
+			justify-content: center;
+		}
+	}
+}
+
+.svg.ky {
+	display: block;
+	width: 50px;
+	height: 23px;
+	margin: 0 auto 15px;
+}
+
+// Subscribe page - vertically center
+.page-id-408 {
+	#layout-1 {
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+		flex-direction: column;
+		height: calc(100vh - 336px);
+		min-height: 600px;
+	}
+}

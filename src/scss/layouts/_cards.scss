@@ -1,0 +1,114 @@
+.layout.cards {
+    .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+        &.top {
+            background-position: center top;
+        }
+        &.middle {
+            background-position: center center;
+        }
+        &.bottom {
+            background-position: center bottom;
+        }
+    }
+    .intro {
+        margin-bottom: 45px;
+    }
+    .wrapper {
+        position: relative;
+    }
+    p {
+        margin-top: 0;
+        font-size: 20px;
+        line-height: 1.2;
+        color: $base-font-color;
+    }
+    .col {
+        overflow: hidden;
+    }
+    .card-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-left: -2em;
+        margin-right: -2em;
+    }
+    .card {
+        flex: 0 0 calc( 1/3 * 100% - 4em );
+        min-width: 300px;
+        max-width: 380px;
+        margin: 0 2em 4em;
+        text-align: center;
+        &:hover {
+            .title {
+                color: $orange;
+                transform: scale(1);
+            }
+        }
+        img {
+            margin-bottom: 20px;
+        }
+        .title {
+            margin-bottom: 15px;
+            transform: scale(0.7);
+            transition: all $base-duration $base-timing;
+            color: $base-font-color;
+            @media screen and ($tablet) {
+                transform: scale(1);
+            }
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: $small-spacing $base-spacing;
+            font-family: $heading-font-family;
+            font-style: italic;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            border: 1px solid $orange;
+            color: $offwhite;
+            cursor: pointer;
+            &:hover {            
+                color: $deepblue;
+                background-color: $orange;
+              }
+        }
+    }
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-left: -2em;
+        margin-right: -2em;
+        .item {
+            flex: 0 0 calc(20% - 4em);
+            min-width: 215px;
+            margin: 0 2em 4em;
+            a {
+                display: block;
+                transform: scale(1);
+                transition: transform $base-duration $base-timing;
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+        }
+        .title {
+            margin: 0 0 10px;
+            color: $orange;
+            font-size: 26px;
+        }
+    }    
+}

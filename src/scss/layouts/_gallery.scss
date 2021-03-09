@@ -1,0 +1,97 @@
+.layout.gallery {
+    .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 0;
+        &.top {
+            background-position: center top;
+        }
+        &.middle {
+            background-position: center center;
+        }
+        &.bottom {
+            background-position: center bottom;
+        }
+    }
+    .glide__slides {
+        align-items: center;
+        padding: 30px 0;
+        transform-style: preserve-3d;
+    }
+    .glide {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+        &.logos {
+            .glide__slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 30px;
+            }
+        }
+    }
+    .glide__controls button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        border: none;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            .arrow {
+                fill: $orange;
+            }
+        }
+        &:first-child {
+            left: -50px;
+        }
+        &:last-child {
+            right: -50px;
+        }
+        .arrow {
+            transition: all $base-duration $base-timing;
+        }
+    }
+    .intro {
+        position: relative;
+    }
+    .content {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+    }
+    .slick-slide {
+        width: 300px;
+        transform: scale(0.6);
+        margin-left: -15px;
+        margin-right: -15px;
+        transition: 300ms opacity ease-in-out, 300ms transform ease-in-out;
+        filter: grayscale(1);
+        opacity: 0.5;
+    }
+    .slick-center {
+        position: relative;
+        margin-left: -15px;
+        margin-right: -15px;
+        transform: scale(1);
+        filter: grayscale(0);
+        opacity: 1;
+        z-index: 10;
+    }
+    .lt1 {
+        margin-left: -75px;
+    }
+    .gt1 {
+        margin-right: -75px;
+    }
+    .lt1,
+    .gt1 {
+        transform: scale(0.8);
+    }
+}

@@ -1,0 +1,226 @@
+header {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 9;
+    &.active {
+        position: fixed;
+        height: 100vh;
+        background-color: rgba($deepblue, 0.8);
+        @media screen and ($menu) {
+            background-color: $deepblue;
+            background-image: url('../img/bg_space_large.jpg');
+            background-position: center -23px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        + .interior-page {
+            padding-top: 217.31px; // Height of the header for larger screens
+            @media screen and ($menu) {
+                padding-top: 193.84px; // Height of the header when the logo gets smaller
+            }
+        }
+        // Menu fading
+        .menu {
+            opacity: 1;
+            transition: opacity $base-duration $base-timing;
+        }
+        .nav-toggle {
+            .toggle-bar-1 {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+            .toggle-bar-2 {
+                transform: rotate(45deg);
+            }
+            .toggle-bar-3 {
+                transform: rotate(-45deg);
+            }
+            .toggle-bar-4 {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+        .basketball {
+            @media screen and ($menu) {
+                display: block;
+                width: 130%;
+                max-width: none;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate3d(-50%, 65%, 0);
+            }
+            @media screen and ($menu) and (max-height: 640px) {
+                width: 143%;
+                position: static;
+                transform: translate3d(0, 330px, 0);
+            }
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @media screen and ($menu) {
+            justify-content: center;
+        }
+    }
+    .logo {
+        display: block;
+        width: 100%;
+        max-width: 150px;
+        z-index: 9;
+        @media screen and ($menu) {
+            max-width: 120px;
+        }
+        svg {
+            display: block;
+            max-height: 118px;
+            @media screen and ($menu) {
+                max-height: 94px;
+            }
+        }
+    }
+    .right {
+        flex: 1 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .menu-item {
+            margin-right: 25px;
+            font-size: 18px;
+            font-family: $heading-font-family;
+            font-weight: 500;
+            line-height: 1.8;
+            color: $offwhite;
+            &:hover,
+            &:focus {
+                color: $orange;
+                &:after {
+                    color: $offwhite;
+                }
+            }
+        }
+        .menu-item.subscribe-modal {
+            @media screen and (max-width: 410px) {
+                display: none;
+            }
+        }
+        .menu-item.contact-modal {
+            @media screen and (max-width: 510px) {
+                display: none;
+            }
+        }
+        .shop-icon {
+            margin-right: 25px;
+        }
+    }
+    .shop-icon {
+        margin-right: 25px;
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: $offwhite;
+            transition: fill $base-duration $base-timing;
+            @media screen and ($menu) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        &:hover svg,
+        &:focus svg {
+            fill: $orange;
+        }
+    }
+    .basketball {
+        display: none;
+    }
+    // Menu fading
+    .menu {
+        opacity: 0;
+        transition: opacity $base-duration $base-timing;
+        &.home-menu {
+            opacity: 1;
+        }
+    }
+    .header-nav {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 125px);
+        padding: 15px 35px 60px;
+        position: absolute;
+        top: 125px;
+        left: 0;
+        pointer-events: none;
+        opacity: 0;
+        overflow: scroll;
+        text-align: right;
+        @media screen and ($menu-mf) {
+            padding-right: 86px;
+        }
+        &.active {
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
+            pointer-events: auto;
+        }
+        .social-menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .mobile-menu {
+            flex-direction: column;
+            
+        }
+        .social {
+            padding-top: 45px;
+            @media screen and ($menu) {
+                padding-top: 30px;
+            }
+        }
+    }
+    .nav-toggle {
+        padding: 0;
+        border: none;
+        &:hover {
+            background-color: transparent;
+        }
+        .toggle-wrapper {
+            display: block;
+            width: 36px;
+            height: 28px;
+            margin: 0 auto;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+        .toggle-bar {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            border-radius: 50px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        .toggle-bar-1 {
+            top: 0px;
+            width: 24px;
+        }
+        .toggle-bar-2, 
+        .toggle-bar-3 {
+            top: 12.3px;
+        }
+        .toggle-bar-4 {
+            top: 24px;
+            width: 30px;
+        }
+    }
+}
